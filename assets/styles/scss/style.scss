@@ -1,16 +1,16 @@
-// =======================================
-//              IMPORT
-// =======================================
+// ==================================
+//           IMPORT
+// ==================================
 @use "./generals";
 @use "./mixins";
 @use "./resets";
 @use "./variables" as var;
 
-// =======================================
-//            LOCAL STYLES
-// =======================================
+// ==================================
+//           LOCAL STYLES
+// ==================================
 
-// ========== Header =============
+// ========= Header =============
 .nav-bar {
   padding: 0 3rem;
   display: flex;
@@ -24,7 +24,7 @@
 
   a {
     font-size: 2.25rem;
-    font-family: Alegreya_SC;
+    font-family: var.$font-family_accent2;
   }
 
   a:hover {
@@ -36,7 +36,7 @@
   }
 }
 
-// ========== Section hero  =============
+// ========= Section hero  ========
 .hero {
   width: 100%;
   height: 100vh;
@@ -47,7 +47,7 @@
   align-items: center;
 
   h1 {
-    font-family: Nixie_One;
+    font-family: var.$font-family_accent3;
     font-size: 3.5rem;
     color: var.$color_accent2;
     transform: translate(0, -15%);
@@ -60,7 +60,7 @@
     transform: translate(0, -55%);
   }
 }
-// ========== Section portoflio  =============
+// ========= Section portoflio  ========
 .portfolio {
   padding: var.$section_padding_grid;
 
@@ -129,7 +129,7 @@
   }
 }
 
-// ========== Section services  =============
+// ========= Section services  ========
 .services {
   @include mixins.section_bgImage("../../img/services.png");
 
@@ -165,18 +165,18 @@
   }
 }
 
-// ========== Section blog  =============
+// ========= Section blog  ========
 
-// ========== Footer =============
+// ========= Footer ========
 
-// =======================================
-//            ANIMATIONS
-// =======================================
+// ==================================
+//           ANIMATIONS
+// ==================================
 
-// =======================================
-//            RESPONSIVENESS
-// =======================================
+// ==================================
+//           RESPONSIVENESS
+// ==================================
 
-// ========== Tablet =============
+// ========= Tablet ========
 
-// ========== Mobile =============
+// ========= Mobile ========

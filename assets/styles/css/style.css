@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Alegreya_Sans";
+  font-family: Alegreya_Sans;
   src: url(../../fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf);
 }
 @font-face {
@@ -11,7 +11,7 @@
   src: url(../../fonts/Nixie_One/NixieOne-Regular.ttf);
 }
 :root {
-  font-family: "Helvetica";
+  font-family: Helvetica;
   line-height: 1.5;
   color: hsl(0, 0%, 42%);
   background-color: hsl(0, 3%, 94%);
@@ -148,7 +148,7 @@ svg {
   transform: translate(0, -15%);
 }
 .hero h4 {
-  font-family: Nixie_One;
+  font-family: Alegreya_SC;
   font-size: 1.5rem;
   color: hsl(187, 17%, 27%);
   transform: translate(0, -55%);
@@ -163,7 +163,7 @@ svg {
   align-items: baseline;
 }
 .portfolio__heading h2 {
-  font-family: "Alegreya_Sans";
+  font-family: Alegreya_Sans;
   font-size: 2.25rem;
   color: hsl(187, 17%, 27%);
   padding-bottom: 1rem;
@@ -244,7 +244,7 @@ svg {
   align-items: center;
 }
 .services__container h2 {
-  font-family: "Alegreya_Sans";
+  font-family: Alegreya_Sans;
   font-size: 2.25rem;
   color: hsl(0, 0%, 100%);
   padding-bottom: 1rem;
