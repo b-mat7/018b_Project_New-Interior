@@ -1,7 +1,25 @@
 @font-face {
-  font-family: "";
-  src: url();
+  font-family: "Alegreya_Sans";
+  src: url(../../fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf);
 }
+@font-face {
+  font-family: Alegreya_SC;
+  src: url(../../fonts/Alegreya_SC/AlegreyaSC-Regular.ttf);
+}
+@font-face {
+  font-family: Nixie_One;
+  src: url(../../fonts/Nixie_One/NixieOne-Regular.ttf);
+}
+:root {
+  font-family: "Helvetica";
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: hsl(0, 0%, 42%);
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: aqua;
+}
+
 /* 1. Use a more-intuitive box-sizing model. */
 *,
 *::before,
@@ -93,6 +111,48 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.nav-bar {
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 1.5rem;
+  width: 100%;
+}
+.nav-bar a {
+  font-size: 2.25rem;
+  font-family: Alegreya_SC;
+}
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+.nav-bar img {
+  cursor: pointer;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../img/hero.png) center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  font-family: Nixie_One;
+  font-size: 3.5rem;
+  color: hsl(0, 0%, 100%);
+  transform: translate(0, -15%);
+}
+.hero h4 {
+  font-family: Nixie_One;
+  font-size: 1.5rem;
+  color: hsl(187, 17%, 27%);
+  transform: translate(0, -55%);
 }
 
 /*# sourceMappingURL=style.css.map */

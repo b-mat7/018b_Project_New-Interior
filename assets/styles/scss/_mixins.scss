@@ -7,8 +7,7 @@
 // ============================================
 //                   MIXINS
 // ============================================
-@mixin root-centered($width: var.$root_width-desktop, $padding: var.$root_padding) {
-  // max-width: $width;
-  // margin: 0 auto;
-  // padding: 0 $padding;
+@mixin root-centered($width: var.$root_width-desktop) {
+  max-width: $width;
+  margin: 0 auto;
 }

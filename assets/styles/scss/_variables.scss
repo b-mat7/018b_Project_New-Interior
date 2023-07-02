@@ -2,8 +2,18 @@
 //                   IMPORT
 // ============================================
 @font-face {
-  font-family: "";
-  src: url();
+  font-family: "Alegreya_Sans";
+  src: url(../../fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: Alegreya_SC;
+  src: url(../../fonts/Alegreya_SC/AlegreyaSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: Nixie_One;
+  src: url(../../fonts/Nixie_One/NixieOne-Regular.ttf);
 }
 
 // ============================================
@@ -11,16 +21,21 @@
 // ============================================
 
 // =============== Styling ==================
-// $font_main: "";
-// $font_accent1: "";
-// $font_accent2: "";
+$font_main: "Helvetica";
+$font_accent1: "Alegreya_Sans";
+$font_accent2: Alegreya_SC;
+$font_accent2: Nixie_One;
 
-// $color_main: red;
-// $color_accent1: blue;
-// $color_accent2: blue;
+$font-size_main: 0.875rem;
+
+$line-height_main: 1.5;
+
+$color_main: hsla(0, 0%, 42%, 1);
+$color_accent1: hsla(187, 17%, 27%, 1);
+$color_accent2: hsla(0, 0%, 100%, 1);
 
 // =============== Root ==================
-// $root_width-desktop: 1440px;
+$root_width-desktop: 1440px;
 
 // $root_padding: 0 3rem;
 

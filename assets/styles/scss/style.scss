@@ -11,8 +11,55 @@
 // ============================================
 
 // =============== Header ==================
+.nav-bar {
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var.$color_accent2;
 
-// =============== Section abc  ==================
+  position: absolute;
+  top: 1.5rem;
+  width: 100%;
+
+  a {
+    font-size: 2.25rem;
+    font-family: Alegreya_SC;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+// =============== Section hero  ==================
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../img/hero.png) center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: Nixie_One;
+    font-size: 3.5rem;
+    color: var.$color_accent2;
+    transform: translate(0, -15%);
+  }
+
+  h4 {
+    font-family: var.$font_accent2;
+    font-size: 1.5rem;
+    color: var.$color_accent1;
+    transform: translate(0, -55%);
+  }
+}
 
 // =============== Footer ==================
 

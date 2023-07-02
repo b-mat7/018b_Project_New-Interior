@@ -8,8 +8,10 @@
 //                   GENERAL STYLES
 // ============================================
 :root {
-  // font-family: var.$font_main;
-  // color: var.$color_main;
+  font-family: var.$font_main;
+  font-size: var.$font-size_main;
+  line-height: var.$line-height_main;
+  color: var.$color_main;
 
-  // @include mixins.root-centered();
+  @include mixins.root-centered();
 }
