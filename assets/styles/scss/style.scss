@@ -62,14 +62,14 @@
 }
 // ========== Section portoflio  =============
 .portfolio {
-  padding: var.$section_padding-grid;
+  padding: var.$section_padding_grid;
 
   &__heading {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    @include mixins.header2-text();
-    @include mixins.header2-btn();
+    @include mixins.header2_text(var.$color_accent1);
+    @include mixins.header2_btn();
   }
 
   &__wrapper {
@@ -109,7 +109,7 @@
       transition: all 300ms ease;
 
       &:hover {
-        color: var.$color_overlay;
+        color: var.$color_overlay_grid;
         background-color: var.$color_accent2;
       }
     }
@@ -119,7 +119,7 @@
     }
 
     &__item:hover .overlay {
-      background-color: var.$color_overlay;
+      background-color: var.$color_overlay_grid;
     }
 
     &__item:hover a {
@@ -128,6 +128,44 @@
     }
   }
 }
+
+// ========== Section services  =============
+.services {
+  @include mixins.section_bgImage("../../img/services.png");
+
+  &__container {
+    @include mixins.section_bgImage_container();
+    @include mixins.header2_text(var.$color_accent2);
+
+    &__wrapper {
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+      column-gap: 80px;
+      row-gap: 1.5rem;
+
+      &__item {
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+
+        img {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+        }
+
+        p {
+          padding-top: 1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// ========== Section blog  =============
 
 // ========== Footer =============
 

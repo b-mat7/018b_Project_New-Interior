@@ -7,16 +7,16 @@
 // =======================================
 //              MIXINS
 // =======================================
-@mixin root-centered($width: var.$root_width-desktop) {
+@mixin root_centered($width: var.$root_width_desktop) {
   max-width: $width;
   margin: 0 auto;
 }
 
-@mixin header2-text(){
+@mixin header2_text($color){
   h2 {
     font-family: var.$font-family_accent1;
     font-size: 2.25rem;
-    color: var.$color_accent1;
+    color: $color;
     padding-bottom: 1rem;
   }
 
@@ -25,7 +25,7 @@
   }
 }
 
-@mixin header2-btn(){
+@mixin header2_btn(){
   a {
     font-size: 1.125rem;
     color: var.$color_accent1;
@@ -39,4 +39,18 @@
     color: var.$color_accent2;
     background-color: var.$color_accent1;
   }
+}
+
+@mixin section_bgImage($url){
+  background: url($url) center / cover;
+  padding: var.$section_padding_bgImage;
+}
+
+@mixin section_bgImage_container(){
+  color: var.$color_accent2;
+  background-color: var.$color_overlay_container;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

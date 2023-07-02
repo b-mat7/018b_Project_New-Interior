@@ -231,4 +231,48 @@ svg {
   opacity: 1;
 }
 
+.services {
+  background: url("../../img/services.png") center/cover;
+  padding: 5rem 135px;
+}
+.services__container {
+  color: hsl(0, 0%, 100%);
+  background-color: hsla(0, 0%, 0%, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services__container h2 {
+  font-family: "Alegreya_Sans";
+  font-size: 2.25rem;
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 1rem;
+}
+.services__container p {
+  font-size: 0.875rem;
+}
+.services__container__wrapper {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 80px;
+  row-gap: 1.5rem;
+}
+.services__container__wrapper__item {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+.services__container__wrapper__item img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.services__container__wrapper__item p {
+  padding-top: 1rem;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
