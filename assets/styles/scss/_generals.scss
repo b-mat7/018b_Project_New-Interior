@@ -1,0 +1,15 @@
+// ============================================
+//                   IMPORT
+// ============================================
+@use "./mixins";
+@use "./variables" as var;
+
+// ============================================
+//                   GENERAL STYLES
+// ============================================
+:root {
+  // font-family: var.$font_main;
+  // color: var.$color_main;
+
+  // @include mixins.root-centered();
+}
