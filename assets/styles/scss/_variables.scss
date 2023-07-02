@@ -1,6 +1,6 @@
-// ============================================
-//                   IMPORT
-// ============================================
+// =======================================
+//              IMPORT
+// =======================================
 @font-face {
   font-family: "Alegreya_Sans";
   src: url(../../fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf);
@@ -16,32 +16,34 @@
   src: url(../../fonts/Nixie_One/NixieOne-Regular.ttf);
 }
 
-// ============================================
-//                   VARIABLES
-// ============================================
+// =======================================
+//              VARIABLES
+// =======================================
 
-// =============== Styling ==================
-$font_main: "Helvetica";
-$font_accent1: "Alegreya_Sans";
-$font_accent2: Alegreya_SC;
-$font_accent2: Nixie_One;
+// ========== Styling =============
+$font-family_primary: "Helvetica";
+$font-family_accent1: "Alegreya_Sans";
+$font-family_accent2: Alegreya_SC;
+$font-family_accent2: Nixie_One;
 
-$font-size_main: 0.875rem;
+$font-size_text: 0.875rem;
 
-$line-height_main: 1.5;
+$line-height_primary: 1.5;
 
-$color_main: hsla(0, 0%, 42%, 1);
+$color_primary: hsla(0, 0%, 42%, 1);
 $color_accent1: hsla(187, 17%, 27%, 1);
 $color_accent2: hsla(0, 0%, 100%, 1);
+$color_overlay: hsla(182, 93%, 12%, 0.7);
 
-// =============== Root ==================
+// ========== Root =============
 $root_width-desktop: 1440px;
 
-// $root_padding: 0 3rem;
+// ========== Local =============
+$section_padding-grid: 3.5rem 150px 5.5rem 150px;
+$section_padding-background: 5rem 135px;
 
-// =============== Local ==================
 
-// =============== Responsiveness ==================
+// ========== Responsiveness =============
 // $breakpoint_mobile: 500px;
 // $breakpoint_tablet: 768px;
 

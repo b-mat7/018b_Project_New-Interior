@@ -1,17 +1,18 @@
-// ============================================
-//                   IMPORT
-// ============================================
+// =======================================
+//              IMPORT
+// =======================================
 @use "./mixins";
 @use "./variables" as var;
 
-// ============================================
-//                   GENERAL STYLES
-// ============================================
+// =======================================
+//              GENERAL STYLES
+// =======================================
 :root {
-  font-family: var.$font_main;
-  font-size: var.$font-size_main;
-  line-height: var.$line-height_main;
-  color: var.$color_main;
+  font-family: var.$font-family_primary;
+  line-height: var.$line-height_primary;
+  color: var.$color_primary;
+
+  background-color: hsl(0, 3%, 94%);
 
   @include mixins.root-centered();
 }
