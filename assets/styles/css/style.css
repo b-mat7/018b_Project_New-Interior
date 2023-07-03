@@ -186,7 +186,7 @@ svg {
 .portfolio__wrapper {
   padding-top: 3.5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 .portfolio__wrapper__item {
@@ -273,6 +273,94 @@ svg {
 .services__container__wrapper__item p {
   padding-top: 1rem;
   text-align: center;
+}
+
+.blog {
+  padding: 3.5rem 150px 5.5rem 150px;
+}
+.blog__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.blog__heading h2 {
+  font-family: Alegreya_Sans;
+  font-size: 2.25rem;
+  color: hsl(187, 17%, 27%);
+  padding-bottom: 1rem;
+}
+.blog__heading p {
+  font-size: 0.875rem;
+}
+.blog__heading a {
+  font-size: 1.125rem;
+  color: hsl(187, 17%, 27%);
+  border: 1px solid hsl(187, 17%, 27%);
+  border-radius: 5px;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+}
+.blog__heading a:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(187, 17%, 27%);
+}
+.blog__wrapper {
+  padding-top: 3.5rem;
+  display: flex;
+  gap: 30px;
+}
+.blog__wrapper__item h3 {
+  padding-top: 1rem;
+  font-family: Alegreya_Sans;
+  font-size: 1.875rem;
+  color: hsl(187, 17%, 27%);
+  text-transform: capitalize;
+}
+.blog__wrapper__item span {
+  font-style: italic;
+}
+.blog__wrapper__item p {
+  padding-top: 1rem;
+}
+.blog__wrapper__item a {
+  padding-top: 1.5rem;
+  display: inline-block;
+  color: hsl(197, 54%, 55%);
+}
+.blog__wrapper__item a:hover {
+  text-decoration: underline;
+}
+
+.quote {
+  background: url("../../img/latin.png") center/cover;
+  padding: 5rem 135px;
+}
+.quote__container {
+  color: hsl(0, 0%, 100%);
+  background-color: hsla(0, 0%, 0%, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quote__container h2 {
+  font-family: Alegreya_Sans;
+  font-size: 2.25rem;
+  color: hsl(0, 0%, 100%);
+  padding-bottom: 1rem;
+}
+.quote__container p {
+  font-size: 0.875rem;
+}
+.quote__container a {
+  margin-top: 4rem;
+  padding: 1rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+.quote__container a:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(187, 17%, 27%);
 }
 
 /*# sourceMappingURL=style.css.map */

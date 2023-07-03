@@ -68,14 +68,14 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    @include mixins.header2_text(var.$color_accent1);
+    @include mixins.header2_text();
     @include mixins.header2_btn();
   }
 
   &__wrapper {
     padding-top: 3.5rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
     &__item {
@@ -166,6 +166,77 @@
 }
 
 // ========= Section blog  ========
+.blog {
+  padding: var.$section_padding_grid;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    @include mixins.header2_text();
+    @include mixins.header2_btn();
+  }
+
+  &__wrapper {
+    padding-top: 3.5rem;
+    display: flex;
+    // justify-content: space-between;
+    gap: 30px;
+
+    &__item {
+      h3 {
+        padding-top: 1rem;
+        font-family: var.$font-family_accent1;
+        font-size: var.$font-size_h3;
+        color: var.$color_accent1;
+        text-transform: capitalize;
+      }
+
+      span {
+        font-style: italic;
+      }
+
+      p {
+        padding-top: 1rem;
+      }
+
+      a {
+        padding-top: 1.5rem;
+        display: inline-block;
+        color: var.$color_blog_link;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// ========= Section quote  ========
+.quote {
+  @include mixins.section_bgImage("../../img/latin.png");
+
+  &__container {
+    @include mixins.section_bgImage_container();
+    @include mixins.header2_text(var.$color_accent2);
+
+    a {
+      margin-top: 4rem;
+      padding: 1rem;
+      border: 1px solid var.$color_accent2;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: var.$color_accent2;
+        color: var.$color_accent1;    
+      }
+    }
+  }
+}
+
+// ========= Section quote  ========
+
 
 // ========= Footer ========
 

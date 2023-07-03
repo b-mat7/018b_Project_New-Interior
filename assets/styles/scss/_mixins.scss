@@ -11,10 +11,10 @@
   margin: 0 auto;
 }
 
-@mixin header2_text($color){
+@mixin header2_text($color: var.$color_accent1){
   h2 {
     font-family: var.$font-family_accent1;
-    font-size: 2.25rem;
+    font-size: var.$font-size_h2;
     color: $color;
     padding-bottom: 1rem;
   }
