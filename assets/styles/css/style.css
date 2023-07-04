@@ -242,6 +242,7 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .services__container h2 {
   font-family: Alegreya_Sans;
@@ -255,9 +256,9 @@ svg {
 .services__container__wrapper {
   padding-top: 1rem;
   display: flex;
-  justify-content: space-around;
-  column-gap: 80px;
-  row-gap: 1.5rem;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
 }
 .services__container__wrapper__item {
   padding-top: 4rem;
@@ -272,7 +273,6 @@ svg {
 }
 .services__container__wrapper__item p {
   padding-top: 1rem;
-  text-align: center;
 }
 
 .blog {
@@ -307,7 +307,15 @@ svg {
 .blog__wrapper {
   padding-top: 3.5rem;
   display: flex;
+  justify-content: space-between;
   gap: 30px;
+}
+.blog__wrapper__item {
+  position: relative;
+  transition: transform 300ms ease;
+}
+.blog__wrapper__item img {
+  filter: grayscale(100%);
 }
 .blog__wrapper__item h3 {
   padding-top: 1rem;
@@ -330,6 +338,12 @@ svg {
 .blog__wrapper__item a:hover {
   text-decoration: underline;
 }
+.blog__wrapper__item:hover {
+  transform: scale(1.05);
+}
+.blog__wrapper__item:hover img {
+  filter: grayscale(0);
+}
 
 .quote {
   background: url("../../img/latin.png") center/cover;
@@ -342,6 +356,7 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .quote__container h2 {
   font-family: Alegreya_Sans;
@@ -382,6 +397,7 @@ svg {
   padding-top: 3.5rem;
   display: flex;
   justify-content: space-between;
+  gap: 30px;
   text-align: center;
   width: 100%;
 }
@@ -417,6 +433,7 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .contact__container h2 {
   font-family: Alegreya_Sans;
@@ -472,6 +489,67 @@ footer p {
   top: 40%;
   left: 10%;
   color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 1200px) {
+  .portfolio,
+  .blog,
+  .testimonials {
+    padding: 2.5rem 5% 4rem 5%;
+  }
+  .services,
+  .quote,
+  .contact {
+    padding: 4rem 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portfolio__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services__container__wrapper,
+  .blog__wrapper,
+  .testimonials__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .portfolio__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 425px) {
+  .nav-bar a {
+    font-size: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero h4 {
+    font-size: 1.2rem;
+  }
+  .portfolio,
+  .blog,
+  .testimonials {
+    padding: 2rem 2.5% 3rem 2.5%;
+  }
+  .services,
+  .quote,
+  .contact {
+    padding: 3rem 2.5%;
+  }
+  .portfolio__heading h2,
+  .blog__heading h2,
+  .testimonials h2,
+  .services__container h2,
+  .contact__container h2 {
+    font-size: 1.875rem;
+  }
+  .portfolio__heading a,
+  .blog__heading a {
+    font-size: 0.875rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

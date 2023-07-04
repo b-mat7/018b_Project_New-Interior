@@ -60,9 +60,10 @@
     transform: translate(0, -55%);
   }
 }
+
 // ========= portoflio section ========
 .portfolio {
-  padding: var.$section_padding_grid;
+  padding: var.$section_grid_padding;
 
   &__heading {
     display: flex;
@@ -140,9 +141,9 @@
     &__wrapper {
       padding-top: 1rem;
       display: flex;
-      justify-content: space-around;
-      column-gap: 80px;
-      row-gap: 1.5rem;
+      justify-content: space-between;
+      gap: 30px;
+      width: 100%;
 
       &__item {
         padding-top: 4rem;
@@ -158,7 +159,7 @@
 
         p {
           padding-top: 1rem;
-          text-align: center;
+          // text-align: center;
         }
       }
     }
@@ -167,7 +168,7 @@
 
 // ========= blog section ========
 .blog {
-  padding: var.$section_padding_grid;
+  padding: var.$section_grid_padding;
 
   &__heading {
     display: flex;
@@ -180,10 +181,17 @@
   &__wrapper {
     padding-top: 3.5rem;
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     gap: 30px;
 
     &__item {
+      position: relative;
+      transition: transform 300ms ease;
+
+      img {
+        filter: grayscale(100%);
+      }
+
       h3 {
         padding-top: 1rem;
         font-family: var.$font-family_accent1;
@@ -208,6 +216,14 @@
         &:hover {
           text-decoration: underline;
         }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:hover img {
+        filter: grayscale(0);
       }
     }
   }
@@ -237,7 +253,7 @@
 
 // ========= testimonials section ========
 .testimonials {
-  padding: var.$section_padding_grid;
+  padding: var.$section_grid_padding;
   @include mixins.header2_text();
   display: flex;
   flex-direction: column;
@@ -247,6 +263,7 @@
     padding-top: 3.5rem;
     display: flex;
     justify-content: space-between;
+    gap: 30px;
     text-align: center;
     width: 100%;
 
@@ -345,6 +362,78 @@ footer {
 //           RESPONSIVENESS
 // ==================================
 
-// ========= Tablet ========
+// ========= Desktop - 1200px ========
+@include mixins.media-query(var.$breakpoint_xl) {
+  .portfolio,
+  .blog,
+  .testimonials {
+    padding: 2.5rem 5% 4rem 5%;
+  }
 
-// ========= Mobile ========
+  .services,
+  .quote,
+  .contact {
+    padding: 4rem 16px;
+  }
+}
+
+// ========= Tablet - 768px ========
+@include mixins.media-query(var.$breakpoint_md) {
+  .portfolio__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services__container__wrapper,
+  .blog__wrapper,
+  .testimonials__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+// ========= Mobile - 576px ========
+@include mixins.media-query(var.$breakpoint_xs) {
+  .portfolio__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ========= Mobile - 425px ========
+@include mixins.media-query(var.$breakpoint_xxs) {
+  .nav-bar a {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h4 {
+    font-size: 1.2rem;
+  }
+
+  .portfolio,
+  .blog,
+  .testimonials {
+    padding: 2rem 2.5% 3rem 2.5%;
+  }
+
+  .services,
+  .quote,
+  .contact {
+    padding: 3rem 2.5%;
+  }
+
+  .portfolio__heading h2,
+  .blog__heading h2,
+  .testimonials h2,
+  .services__container h2,
+  .contact__container h2 {
+    font-size: 1.875rem;
+  }
+
+  .portfolio__heading a,
+  .blog__heading a {
+    font-size: 0.875rem
+  }
+}

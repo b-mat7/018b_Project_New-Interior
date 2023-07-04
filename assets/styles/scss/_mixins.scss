@@ -42,7 +42,7 @@
 
 @mixin section_bgImage($url){
   background: url($url) center / cover;
-  padding: var.$section_padding_bgImage;
+  padding: var.$section_bgImage_padding;
 }
 
 @mixin section_bgImage_container(){
@@ -52,4 +52,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+@mixin media-query($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
 }
