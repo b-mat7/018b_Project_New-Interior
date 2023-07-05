@@ -10,7 +10,7 @@
 //           LOCAL STYLES
 // ==================================
 
-// ========= Header =============
+// ========= header =============
 .nav-bar {
   padding: 0 3rem;
   display: flex;
@@ -20,7 +20,9 @@
 
   position: absolute;
   top: 1.5rem;
-  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
 
   a {
     font-size: 2.25rem;
@@ -36,7 +38,6 @@
   }
 }
 
-// ========= hero section ========
 .hero {
   width: 100%;
   height: 100vh;
@@ -61,7 +62,8 @@
   }
 }
 
-// ========= portoflio section ========
+// ========= main =============
+// ========= portfolio section ========
 .portfolio {
   padding: var.$section_grid_padding;
 
@@ -185,7 +187,6 @@
     gap: 30px;
 
     &__item {
-      position: relative;
       transition: transform 300ms ease;
 
       img {
@@ -340,7 +341,7 @@
   }
 }
 
-// ========= Footer ========
+// ========= footer ========
 footer {
   position: relative;
   min-height: 130px;
@@ -355,14 +356,31 @@ footer {
 }
 
 // ==================================
-//           ANIMATIONS
-// ==================================
-
-// ==================================
 //           RESPONSIVENESS
 // ==================================
 
-// ========= Desktop - 1200px ========
+// ========= Desktop >1440px =======
+@include mixins.media-query_widescreen(var.$root_width_desktop) {
+  :root {
+    max-width: initial;
+    margin: initial;
+  }
+
+  .nav-bar {
+    max-width: 1440px;
+  }
+
+  .hero {
+    width: 100vw;
+  }
+
+  main,
+  footer {
+    @include mixins.centered();
+  }
+}
+
+// ========= Desktop 1200px ========
 @include mixins.media-query(var.$breakpoint_xl) {
   .portfolio,
   .blog,
@@ -377,7 +395,7 @@ footer {
   }
 }
 
-// ========= Tablet - 768px ========
+// ========= Tablet 768px ========
 @include mixins.media-query(var.$breakpoint_md) {
   .portfolio__wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -391,17 +409,21 @@ footer {
   }
 }
 
-// ========= Mobile - 576px ========
+// ========= Mobile 576px ========
 @include mixins.media-query(var.$breakpoint_xs) {
   .portfolio__wrapper {
     grid-template-columns: 1fr;
   }
 }
 
-// ========= Mobile - 425px ========
+// ========= Mobile 425px ========
 @include mixins.media-query(var.$breakpoint_xxs) {
-  .nav-bar a {
-    font-size: 1.5rem;
+  .nav-bar {
+    width: 100%;
+
+    a {
+      font-size: 1.5rem;
+    }
   }
 
   .hero h1 {

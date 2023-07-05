@@ -14,5 +14,5 @@
 
   background-color: var.$color_root_background;
 
-  @include mixins.root_centered();
+  @include mixins.centered();
 }

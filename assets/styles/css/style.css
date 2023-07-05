@@ -119,7 +119,9 @@ svg {
   color: hsl(0, 0%, 100%);
   position: absolute;
   top: 1.5rem;
-  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
 }
 .nav-bar a {
   font-size: 2.25rem;
@@ -311,7 +313,6 @@ svg {
   gap: 30px;
 }
 .blog__wrapper__item {
-  position: relative;
   transition: transform 300ms ease;
 }
 .blog__wrapper__item img {
@@ -491,6 +492,23 @@ footer p {
   color: hsl(0, 0%, 100%);
 }
 
+@media screen and (width > 1440px) {
+  :root {
+    max-width: initial;
+    margin: initial;
+  }
+  .nav-bar {
+    max-width: 1440px;
+  }
+  .hero {
+    width: 100vw;
+  }
+  main,
+  footer {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 1200px) {
   .portfolio,
   .blog,
@@ -520,6 +538,9 @@ footer p {
   }
 }
 @media screen and (max-width: 425px) {
+  .nav-bar {
+    width: 100%;
+  }
   .nav-bar a {
     font-size: 1.5rem;
   }

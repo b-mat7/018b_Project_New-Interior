@@ -6,7 +6,7 @@
 // ==================================
 //           MIXINS
 // ==================================
-@mixin root_centered($width: var.$root_width_desktop) {
+@mixin centered($width: var.$root_width_desktop) {
   max-width: $width;
   margin: 0 auto;
 }
@@ -57,6 +57,12 @@
 
 @mixin media-query($breakpoint) {
   @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-query_widescreen($breakpoint) {
+  @media screen and (width > $breakpoint) {
     @content;
   }
 }
