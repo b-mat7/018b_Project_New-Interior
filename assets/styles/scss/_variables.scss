@@ -2,6 +2,11 @@
 //           IMPORT
 // ==================================
 @font-face {
+  font-family: Nixie_One;
+  src: url(../../fonts/Nixie_One/NixieOne-Regular.ttf);
+}
+
+@font-face {
   font-family: Alegreya_Sans;
   src: url(../../fonts/Alegreya_Sans/AlegreyaSans-Regular.ttf);
 }
@@ -11,30 +16,26 @@
   src: url(../../fonts/Alegreya_SC/AlegreyaSC-Regular.ttf);
 }
 
-@font-face {
-  font-family: Nixie_One;
-  src: url(../../fonts/Nixie_One/NixieOne-Regular.ttf);
-}
-
 // ==================================
 //           VARIABLES
 // ==================================
 
 // ========= Styling =============
 $font-family_primary: Helvetica;
-$font-family_accent1: Alegreya_Sans;
-$font-family_accent2: Alegreya_SC;
-$font-family_accent3: Nixie_One;
+$font-family_headding_hero: Nixie_One;
+$font-family_heading_section: Alegreya_Sans;
+$font-family_heading_blog: Alegreya_SC;
 
-$font-size_h2: 2.25rem;
-$font-size_h3: 1.875rem;
-$font-size_text: 0.875rem;
+$font-size_primary: 0.875rem;
+$font-size_heading_hero: 3.5rem;
+$font-size_heading_section: 2.25rem;
+$font-size_heading_blog: 1.875rem;
 
 $line-height_primary: 1.5;
 
 $color_primary: hsla(0, 0%, 42%, 1);
-$color_accent1: hsla(187, 17%, 27%, 1);
-$color_accent2: hsla(0, 0%, 100%, 1);
+$color_accent_grey: hsla(187, 17%, 27%, 1);
+$color_accent_white: hsla(0, 0%, 100%, 1);
 $color_overlay_grid: hsla(182, 93%, 12%, 0.7);
 $color_overlay_container: hsla(0, 0%, 0%, 0.2);
 $color_blog_link: hsla(197, 54%, 55%, 1);
@@ -46,7 +47,7 @@ $root_width_desktop: 1440px;
 
 // ========= Local =============
 $section_grid_padding: 3.5rem 150px 5.5rem 150px;
-$section_bgImage_padding: 5rem 135px;
+$section_bg-Image_padding: 5rem 135px;
 
 // ========= Responsiveness =======
 $breakpoint_xl: 1200px;

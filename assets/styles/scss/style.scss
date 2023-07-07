@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  color: var.$color_accent2;
+  color: var.$color_accent_white;
 
   position: absolute;
   top: 1.5rem;
@@ -26,11 +26,11 @@
 
   a {
     font-size: 2.25rem;
-    font-family: var.$font-family_accent2;
-  }
-
-  a:hover {
-    text-decoration: underline;
+    font-family: var.$font-family_heading_blog;
+  
+    &:hover {
+      text-decoration: underline;
+    } 
   }
 
   img {
@@ -48,16 +48,16 @@
   align-items: center;
 
   h1 {
-    font-family: var.$font-family_accent3;
-    font-size: 3.5rem;
-    color: var.$color_accent2;
+    font-family: var.$font-family_headding_hero;
+    font-size: var.$font-size_heading_hero;
+    color: var.$color_accent_white;
     transform: translate(0, -15%);
   }
 
   h4 {
-    font-family: var.$font-family_accent2;
+    font-family: var.$font-family_heading_blog;
     font-size: 1.5rem;
-    color: var.$color_accent1;
+    color: var.$color_accent_grey;
     transform: translate(0, -55%);
   }
 }
@@ -71,8 +71,8 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    @include mixins.header2_text();
-    @include mixins.header2_btn();
+    @include mixins.section_heading_txt();
+    @include mixins.section_heading_btn();
   }
 
   &__wrapper {
@@ -104,16 +104,16 @@
       top: 75%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: var.$color_accent2;
+      color: var.$color_accent_white;
       padding: 0.5rem 1rem;
       border-radius: 5px;
-      border: 1px solid var.$color_accent2;
+      border: 1px solid var.$color_accent_white;
       opacity: 0;
       transition: all 300ms ease;
 
       &:hover {
         color: var.$color_overlay_grid;
-        background-color: var.$color_accent2;
+        background-color: var.$color_accent_white;
       }
     }
 
@@ -134,11 +134,11 @@
 
 // ========= services section ========
 .services {
-  @include mixins.section_bgImage("../../img/services.png");
+  @include mixins.section_bg-Image("../../img/services.png");
 
   &__container {
-    @include mixins.section_bgImage_container();
-    @include mixins.header2_text(var.$color_accent2);
+    @include mixins.section_bg-Image_container();
+    @include mixins.section_heading_txt(var.$color_accent_white);
 
     &__wrapper {
       padding-top: 1rem;
@@ -161,7 +161,6 @@
 
         p {
           padding-top: 1rem;
-          // text-align: center;
         }
       }
     }
@@ -176,8 +175,8 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    @include mixins.header2_text();
-    @include mixins.header2_btn();
+    @include mixins.section_heading_txt();
+    @include mixins.section_heading_btn();
   }
 
   &__wrapper {
@@ -195,9 +194,9 @@
 
       h3 {
         padding-top: 1rem;
-        font-family: var.$font-family_accent1;
-        font-size: var.$font-size_h3;
-        color: var.$color_accent1;
+        font-family: var.$font-family_heading_section;
+        font-size: var.$font-size_heading_blog;
+        color: var.$color_accent_grey;
         text-transform: capitalize;
       }
 
@@ -207,6 +206,7 @@
 
       p {
         padding-top: 1rem;
+        font-size: var.$font-size_primary;
       }
 
       a {
@@ -232,21 +232,21 @@
 
 // ========= quote section ========
 .quote {
-  @include mixins.section_bgImage("../../img/latin.png");
+  @include mixins.section_bg-Image("../../img/latin.png");
 
   &__container {
-    @include mixins.section_bgImage_container();
-    @include mixins.header2_text(var.$color_accent2);
+    @include mixins.section_bg-Image_container();
+    @include mixins.section_heading_txt(var.$color_accent_white);
 
     a {
       margin-top: 4rem;
       padding: 1rem;
-      border: 1px solid var.$color_accent2;
+      border: 1px solid var.$color_accent_white;
       border-radius: 5px;
 
       &:hover {
-        background-color: var.$color_accent2;
-        color: var.$color_accent1;    
+        background-color: var.$color_accent_white;
+        color: var.$color_accent_grey;    
       }
     }
   }
@@ -255,7 +255,7 @@
 // ========= testimonials section ========
 .testimonials {
   padding: var.$section_grid_padding;
-  @include mixins.header2_text();
+  @include mixins.section_heading_txt();
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,34 +273,34 @@
       flex-direction: column;
       align-items: center;
       max-width: 300px;
-    }
 
-    img {
-      width: 150px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 50%;
-    }
+      img {
+        width: 150px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+      }
 
-    p {
-      padding-top: 1rem;
-    }
+      p {
+        padding-top: 1rem;
+      }
 
-    span:nth-of-type(1) {
-      padding-top: 1.2rem;
-      font-weight: 700;
+      span:nth-of-type(1) {
+        padding-top: 1.2rem;
+        font-weight: 700;
+      }
     }
   }
 }
 
 // ========= contact section ========
 .contact {
-  @include mixins.section_bgImage("../../img/contact.png");
+  @include mixins.section_bg-Image("../../img/contact.png");
 
   &__container {
-    @include mixins.section_bgImage_container();
-    @include mixins.header2_text(var.$color_accent2);
+    @include mixins.section_bg-Image_container();
+    @include mixins.section_heading_txt(var.$color_accent_white);
 
     &__form {
       padding-top: 2.5rem;
@@ -315,12 +315,12 @@
         width: 100%;
         line-height: 2;
         background: transparent;
-        color: var.$color_accent2;
-        border: 1px solid var.$color_accent2;
+        color: var.$color_accent_white;
+        border: 1px solid var.$color_accent_white;
         padding-left: 0.5rem;
 
         &::placeholder {
-          color: var.$color_accent2;
+          color: var.$color_accent_white;
           opacity: 0.5;
         }
       }
@@ -329,11 +329,11 @@
         margin-top: 1rem;
         padding: 0.5rem 1rem;
         background: transparent;
-        border: 1px solid var.$color_accent2;
+        border: 1px solid var.$color_accent_white;
         
         &:hover {
-          background-color: var.$color_accent2;
-          color: var.$color_accent1;
+          background-color: var.$color_accent_white;
+          color: var.$color_accent_grey;
           cursor: pointer;
         }
       }
@@ -343,15 +343,11 @@
 
 // ========= footer ========
 footer {
-  position: relative;
-  min-height: 130px;
   background-color: var.$color_footer_background;
 
   p {
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    color: var.$color_accent2;
+    padding: 3rem 0 48px 10%;
+    color: var.$color_accent_white;
   }
 }
 
