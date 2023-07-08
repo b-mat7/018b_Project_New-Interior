@@ -1,0 +1,61 @@
+// ==================================
+//           IMPORT
+// ==================================
+@use "../base/resets";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+// ==================================
+//           LOCAL STYLES
+// ==================================
+
+// ========= header =============
+.nav-bar {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  max-width: 1440px;
+  color: var.$color_accent_white;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  a {
+    font-size: 2.25rem;
+    font-family: var.$font-family_heading_blog;
+  
+    &:hover {
+      text-decoration: underline;
+    } 
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../../img/hero.png) center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: var.$font-family_headding_hero;
+    font-size: var.$font-size_heading_hero;
+    color: var.$color_accent_white;
+    transform: translate(0, -15%);
+  }
+
+  h4 {
+    font-family: var.$font-family_heading_blog;
+    font-size: 1.5rem;
+    color: var.$color_accent_grey;
+    transform: translate(0, -55%);
+  }
+}

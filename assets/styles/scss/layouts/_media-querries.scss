@@ -1,0 +1,88 @@
+// ==================================
+//           IMPORT
+// ==================================
+@use "../base/resets";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+// ==================================
+//           RESPONSIVENESS
+// ==================================
+
+// ========= Desktop 1200px ========
+@include mixins.media-query(var.$breakpoint_xl) {
+  .portfolio,
+  .blog,
+  .testimonials {
+    padding: 2.5rem 5% 4rem 5%;
+  }
+
+  .services,
+  .quote,
+  .contact {
+    padding: 4rem 16px;
+  }
+}
+
+// ========= Tablet 768px ========
+@include mixins.media-query(var.$breakpoint_md) {
+  .portfolio__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services__container__wrapper,
+  .blog__wrapper,
+  .testimonials__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+// ========= Mobile 576px ========
+@include mixins.media-query(var.$breakpoint_xs) {
+  .portfolio__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ========= Mobile 425px ========
+@include mixins.media-query(var.$breakpoint_xxs) {
+  .nav-bar {
+    a {
+      font-size: 1.5rem;
+    }
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h4 {
+    font-size: 1.2rem;
+  }
+
+  .portfolio,
+  .blog,
+  .testimonials {
+    padding: 2rem 2.5% 3rem 2.5%;
+  }
+
+  .services,
+  .quote,
+  .contact {
+    padding: 3rem 2.5%;
+  }
+
+  .portfolio__heading h2,
+  .blog__heading h2,
+  .testimonials h2,
+  .services__container h2,
+  .contact__container h2 {
+    font-size: 1.875rem;
+  }
+
+  .portfolio__heading a,
+  .blog__heading a {
+    font-size: 0.875rem
+  }
+}

@@ -1,0 +1,14 @@
+// ==================================
+//           IMPORT
+// ==================================
+@use "../base/resets";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+// ==================================
+//           LOCAL STYLES
+// ==================================
+
+.main {
+  @include mixins.centered();
+}

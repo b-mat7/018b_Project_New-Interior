@@ -60,9 +60,3 @@
     @content;
   }
 }
-
-@mixin media-query_widescreen($breakpoint) {
-  @media screen and (width > $breakpoint) {
-    @content;
-  }
-}

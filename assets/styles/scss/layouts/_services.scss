@@ -1,0 +1,44 @@
+// ==================================
+//           IMPORT
+// ==================================
+@use "../base/resets";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+// ==================================
+//           LOCAL STYLES
+// ==================================
+
+.services {
+  @include mixins.section_bg-Image("../../img/services.png");
+
+  &__container {
+    @include mixins.section_bg-Image_container();
+    @include mixins.section_heading_txt(var.$color_accent_white);
+
+    &__wrapper {
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      width: 100%;
+
+      &__item {
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+
+        img {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+        }
+
+        p {
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+}

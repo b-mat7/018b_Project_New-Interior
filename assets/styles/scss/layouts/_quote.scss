@@ -1,0 +1,31 @@
+// ==================================
+//           IMPORT
+// ==================================
+@use "../base/resets";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+// ==================================
+//           LOCAL STYLES
+// ==================================
+
+.quote {
+  @include mixins.section_bg-Image("../../img/latin.png");
+
+  &__container {
+    @include mixins.section_bg-Image_container();
+    @include mixins.section_heading_txt(var.$color_accent_white);
+
+    a {
+      margin-top: 4rem;
+      padding: 1rem;
+      border: 1px solid var.$color_accent_white;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: var.$color_accent_white;
+        color: var.$color_accent_grey;    
+      }
+    }
+  }
+}

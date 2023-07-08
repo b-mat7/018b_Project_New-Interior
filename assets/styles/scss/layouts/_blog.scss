@@ -1,0 +1,72 @@
+// ==================================
+//           IMPORT
+// ==================================
+@use "../base/resets";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+// ==================================
+//           LOCAL STYLES
+// ==================================
+
+.blog {
+  padding: var.$section_grid_padding;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    @include mixins.section_heading_txt();
+    @include mixins.section_heading_btn();
+  }
+
+  &__wrapper {
+    padding-top: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    &__item {
+      transition: transform 300ms ease;
+
+      img {
+        filter: grayscale(100%);
+      }
+
+      h3 {
+        padding-top: 1rem;
+        font-family: var.$font-family_heading_section;
+        font-size: var.$font-size_heading_blog;
+        color: var.$color_accent_grey;
+        text-transform: capitalize;
+      }
+
+      span {
+        font-style: italic;
+      }
+
+      p {
+        padding-top: 1rem;
+        font-size: var.$font-size_primary;
+      }
+
+      a {
+        padding-top: 1.5rem;
+        display: inline-block;
+        color: var.$color_blog_link;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:hover img {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// ==================================
+//           IMPORT
+// ==================================
+@use "../base/resets";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+// ==================================
+//           LOCAL STYLES
+// ==================================
+
+.footer {
+  @include mixins.centered();
+  background-color: var.$color_footer_background;
+
+  p {
+    padding: 3rem 0 48px 10%;
+    color: var.$color_accent_white;
+  }
+}
